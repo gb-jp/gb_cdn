@@ -1,0 +1,24 @@
+.gbdemo_demo{
+  display: none;
+}
+.gbdemo_public{
+  display: block;
+}
+.gbdemo .gbdemo_demo{
+  display: block;
+  border: 3px solid #ff0000;
+  position: relative;
+}
+.gbdemo .gbdemo_demo::before{
+  content: 'DEMO';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.gbdemo .gbdemo_public{
+  display: none;
+}

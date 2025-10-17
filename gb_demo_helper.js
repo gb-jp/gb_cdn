@@ -55,3 +55,29 @@
   // ─── 5) リダイレクト (replace なので履歴を汚さない) ───
   window.location.replace(newUrl);
 })();
+
+// ─── gbdemo パラメータが存在する場合、body に "gbdemoxxx" クラスを追加 ───
+(function () {
+  var match = window.location.search.match(/[?&]gbdemo=([^&#]+)/);
+  if (!match) return; // gbdemo パラメータなし
+  
+  var gbdemoValue = match[1];
+  var className = 'gbdemo';
+  
+  // DOM が読み込まれているか確認
+  function addClassToBody() {
+    if (document.body) {
+      // 既にクラスが追加されていなければ追加
+      if (!document.body.classList.contains(className)) {
+        document.body.classList.add(className);
+      }
+    }
+  }
+  
+  // DOM が既に読み込まれている場合はすぐに実行
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addClassToBody);
+  } else {
+    addClassToBody();
+  }
+})();
