@@ -6,11 +6,23 @@
 }
 .gbdemo .gbdemo_demo{
   display: block;
-  border: 3px solid #ff0000;
+}
+.gbdemo .gbdemo_public{
+  display: none;
+}
+.elementor-preview .gbdemo_demo{
+  border: 3px solid #ff0000 !important;
   position: relative;
 }
-.gbdemo .gbdemo_demo::before{
-  content: 'DEMO';
+.elementor-preview .gbdemo_public{
+  border: 3px solid #00ff91 !important;
+  position: relative;
+}
+.elementor-preview .gbdemo_demo{
+  display: block !important;
+}
+.elementor-preview .gbdemo_demo::before{
+  content: 'デモ状態';
   position: absolute;
   top: 0;
   left: 0;
@@ -19,6 +31,13 @@
   padding: 5px 10px;
   border-radius: 5px;
 }
-.gbdemo .gbdemo_public{
-  display: none;
+.elementor-preview .gbdemo_public::before{
+  content: '公開状態';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00ff91;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
