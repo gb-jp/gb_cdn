@@ -10,19 +10,22 @@
 .gbdemo .gbdemo_public{
   display: none;
 }
-
-[class^="elementor-edit-area"] .gbdemo_demo{
+.elementor-edit-area .gbdemo_demo,
+.elementor-edit-mode .gbdemo_demo{
   border: 3px solid #ff0000 !important;
   position: relative;
 }
-[class^="elementor-edit-area"] .gbdemo_public{
+.elementor-edit-area .gbdemo_public,
+.elementor-edit-mode .gbdemo_public{
   border: 3px solid #00ff91 !important;
   position: relative;
 }
-[class^="elementor-edit-area"] .gbdemo_demo{
+.elementor-edit-area .gbdemo_demo,
+.elementor-edit-mode .gbdemo_demo{
   display: block !important;
 }
-[class^="elementor-edit-area"] .gbdemo_demo::before{
+.elementor-edit-area .gbdemo_demo::before,
+.elementor-edit-mode .gbdemo_demo::before{
   content: 'デモ状態';
   position: absolute;
   top: 0;
@@ -33,7 +36,8 @@
   border-radius: 5px;
   z-index: 10;
 }
-[class^="elementor-edit-area"] .gbdemo_public::before{
+.elementor-edit-area .gbdemo_public::before,
+.elementor-edit-mode .gbdemo_public::before{
   content: '公開状態';
   position: absolute;
   top: 0;
