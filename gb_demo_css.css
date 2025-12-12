@@ -10,18 +10,19 @@
 .gbdemo .gbdemo_public{
   display: none;
 }
-.elementor-edit-area .gbdemo_demo{
+
+[class^="elementor-edit-area"] .gbdemo_demo{
   border: 3px solid #ff0000 !important;
   position: relative;
 }
-.elementor-edit-area .gbdemo_public{
+[class^="elementor-edit-area"] .gbdemo_public{
   border: 3px solid #00ff91 !important;
   position: relative;
 }
-.elementor-edit-area .gbdemo_demo{
+[class^="elementor-edit-area"] .gbdemo_demo{
   display: block !important;
 }
-.elementor-edit-area .gbdemo_demo::before{
+[class^="elementor-edit-area"] .gbdemo_demo::before{
   content: 'デモ状態';
   position: absolute;
   top: 0;
@@ -32,7 +33,7 @@
   border-radius: 5px;
   z-index: 10;
 }
-.elementor-edit-area .gbdemo_public::before{
+[class^="elementor-edit-area"] .gbdemo_public::before{
   content: '公開状態';
   position: absolute;
   top: 0;
