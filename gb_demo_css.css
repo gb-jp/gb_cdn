@@ -35,6 +35,7 @@
   padding: 5px 10px;
   border-radius: 5px;
   z-index: 10;
+  pointer-events: none;
 }
 .elementor-edit-area .gbdemo_public::before,
 .elementor-edit-mode .gbdemo_public::before{
@@ -47,4 +48,5 @@
   padding: 5px 10px;
   border-radius: 5px;
   z-index: 10;
+  pointer-events: none;
 }
